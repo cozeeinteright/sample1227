@@ -3,4 +3,4 @@ let arr2 = [];
 
 let fruits = ["Apple","Orange","Plum"];
 
-console.log( fruits[1]);
+console.log( fruits[0]);
