@@ -1,11 +1,11 @@
-let set = new Set();
-
-let john = { name: "John" };
-let pete = { name: "Pete" };
-
-set.add(john);
-set.add(pete);
-
-for(let user of set ) {
-  console.log(user.name);
+function makeCounter() {
+  let count = 0;
+  return function() {
+    return count++;
+  };
 }
+
+let counter = makeCounter()
+
+console.log(counter());
+console.log(counter());
