@@ -1,11 +1,5 @@
-function makeCounter() {
-  let count = 0;
-  return function() {
-    return count++;
-  };
+function sayHi() {
+  console.log('Hello');
 }
 
-let counter = makeCounter()
-
-console.log(counter());
-console.log(counter());
+setTimeout(sayHi, 1000);
