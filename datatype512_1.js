@@ -3,6 +3,7 @@ let user = {
   age: 30
 };
 
+
 let json = JSON.stringify(user);
 
 

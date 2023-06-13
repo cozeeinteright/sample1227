@@ -1,30 +1,21 @@
-let worker = {
-  someMethod() {
-    return 1;
+"use strict"
+
+let user = {
+  name: "John",
+  surname: "Smith",
+
+  get fullName() {
+    return `${this.name} ${this.surname}`
   },
 
-  slow(x) {
-    // scary CPU-heavy task here
-    console.log("Called with " + x);
-    return x * this.someMethod(); // (*)
+  set fullName(value){
+    [this.name, this.surname] = value.split(" ")
   }
 };
 
-// same code as before
-function cachingDecorator(func) {
-  let cache = new Map();
-  return function(x) {
-    if (cache.has(x)) {
-      return cache.get(x);
-    }
-    let result = func.call(this,x); // (**)
-    cache.set(x, result);
-    return result;
-  };
-}
+user.fullName = "Alice Cooper";
 
-console.log( worker.slow(1) ); // the original method works
+console.log(user.name);
+console.log(user.surname);
 
-worker.slow = cachingDecorator(worker.slow); // now make it caching
 
-console.log( worker.slow(2) );

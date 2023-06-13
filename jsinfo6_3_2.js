@@ -1,4 +1,5 @@
-function sayHiBye(firstName, lastName) {
+function sayHiBye(firstName, lastName) 
+  {
   
   function getFullName() {
     return firstName + " " + lastName;
@@ -9,3 +10,4 @@ function sayHiBye(firstName, lastName) {
 }
 
 sayHiBye("John","Smith");
+
