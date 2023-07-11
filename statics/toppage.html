@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head></head>
-  <body>Hello
+  <body>
+    <p>Hello</p>
+    <p>Alice</p>
     <script type="module">
-      alert(typeof button);
+      import {sayHi} from './say.js';
+      document.body.innerHTML = sayHi('John');
     </script>
-    <script >
-      alert(typeof button);
-    </script>
-    <button id="button">Button</button>
   </body>
 </html>
