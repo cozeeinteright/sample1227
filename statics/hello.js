@@ -1,3 +1,3 @@
-import {user} from './user.js'
+import {user} from './user.js';
 
-alert(user);
+console.log(user);

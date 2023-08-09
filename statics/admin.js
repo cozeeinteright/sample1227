@@ -1,6 +1,5 @@
 export let config = { };
 
-
 export function sayHi() {
-  alert(`Ready to serve, ${config.user}`)
+  alert(`Ready to serve, ${config.user}`);
 }

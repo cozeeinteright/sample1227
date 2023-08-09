@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <script>
+      function sayHi() {
+        alert("Hello");
+      }
+
+      window.sayHi();
+      alert(window.innerHeight);
+
+      document.body.style.background = 'red';
+
+      setTimeout( () => document.body.style.background = '', 1000);
+
+      alert(location.href);
+      if(confirm("Go to wikipedia?")) {
+        location.href = 'https://wikipedia.org';
+      }
+    </script>
+  </body>
+</html>
