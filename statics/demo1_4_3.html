@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <h1>Contents</h1>
+
+    <div class="contents">
+      <ul class="book">
+        <li class="chapter">Chatper 1</li>
+        <li class="chapter">Chapter 1</li>
+      </ul>
+    </div>
+
+    <script>
+      let chapter = document.querySelector('.chapter');
+
+      chapter.closest('.contents').style.background = 'blue';
+      chapter.closest('.book').style.background = 'red';
+
+      chapter.closest('h1').style.background = 'blue';
+
+    </script>
+
+  </body>
+</html>
