@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Jsinfo 1.6 非標準のdataset スタイル</title>
+  </head>
+  <body>
+    <style>
+      .order[order-state="new"] {
+        color: green;
+      }
+
+      .order[order-state="pending"] {
+        color: blue;
+      }
+
+      .order[order-state="canceled"] {
+        color: red;
+      }
+    </style>
+
+    <div id="order" class="order" data-order-state="new">
+      A new order.
+    </div>
+
+    <script>
+      alert(order.dataset.orderState);
+
+      order.dataset.orderState = "pending";
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <div id="elem" about="Elephant"></div>
+
+    <script>
+      alert( elem.getAttribute('About'));
+
+      elem.setAttribute('Test', 123);
+
+      alert( elem.outerHTML );
+
+      for (let attr of elem.attributes) {
+        alert( attr.name + " = " + attr.value);
+      }
+    </script>
+
+  </body>
+</html>
