@@ -3,8 +3,33 @@
   <head>
     <title>Prepare</title>
   </head>
+  <style>
+    .invalid { border-color: red; }
+    #error { color: red }
+  </style>
   <body>
     <h1>Prepare</h1>
-    <script src="prepare.js"></script>
-  </body>
+    <input type="button" value="get message" id="button">
+    <script>
+      let user = {
+        name: 'John',
+        surname: 'Smith',
+      };
+
+      let button = document.getElementById('button');
+
+      button.onclick =  async () => {
+        let response = await fetch('http://localhost:3000/api/postMessage', {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json;charset=utf-8'
+          },
+          body: JSON.stringify(user)
+        });
+        let message = await response.text();
+        alert(message);
+      }
+
+    </script>
+  </body> 
 </html>
