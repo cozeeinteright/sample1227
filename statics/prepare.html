@@ -10,25 +10,25 @@
   <body>
     <h1>Prepare</h1>
     <input type="button" value="get message" id="button">
+    <input type="button" value="Get SVG" id="getSVGButton">
+
+    <form id="formElem">
+      <input type="text" name="name" value="John">
+      <input type="text" name="surname" value="Smith">
+
+    </form>
     <script>
-      let user = {
-        name: 'John',
-        surname: 'Smith',
-      };
-
-      let button = document.getElementById('button');
-
-      button.onclick =  async () => {
-        let response = await fetch('http://localhost:3000/api/postMessage', {
+      (async () => {
+        let responce = await fetch('/api/postMessage',{
           method: 'POST',
-          headers: {
-            'Content-type': 'application/json;charset=utf-8'
-          },
-          body: JSON.stringify(user)
+          body: new FormData(formElem)
         });
-        let message = await response.text();
-        alert(message);
-      }
+
+
+      let result = await response.json();
+
+      alert(result.message);
+    })();
 
     </script>
   </body> 
