@@ -1,0 +1,15 @@
+@import "prepare1216_other.css";
+
+h2 {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: Helvetica;
+  font-variant: normal;
+  font-style: normal;
+  margin-top: 4em;
+  border:solid;
+  border-style: solid dotted;
+  border-width: thin;
+}
+
+h3 { color: red}

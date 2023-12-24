@@ -3,12 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <base href="http://localhost:3000/">
-    <link rel="stypesheet" href="prepare1216.css">
-    <script src="prepare1216.js" async></script>
+    <link rel="stylesheet" href="prepare1216.css">
+    <script src="prepare1216.js"></script>
     <title>Prepare1216</title>
   </head>
   <body>
     <h1>Prepare1216</h1>
-
+    <h2><a title="ahead" href="demo5.html">heading2</a></h2>
+    <h3 titke="heading3">Heading3</h3>
+    <p>visit the <a href="demo5.html">archives</a></p>
+    <p>You are: <span id="status">(Unknoun)</span></p>
+    <form method="post" enctype="application/x-www-form-urlencoded" action="api/postMessage">
+      <p title="paragraph"><label>Customer name: <input></label></p>
+      <p><label>Telephone: <input type=tel></label></p>
+      <p><label>Email: <input type=email></label></p>
+      <fieldset>
+        <legend> Pizza Size</legend>
+        <p class="pastoral"><label><input type=radio name=size>Small</label></p>
+        <p><label><input type=radio name=size>Medium</label></p>
+        <p><label><input type=radio name=size>Large</label></p>
+      </fieldset>
+      <fieldset>
+        <legend>Pizza Toppings</legend>
+        <p><label><input type=checkbox>Bacon</label></p>
+        <p><label><input type=checkbox>Extra</label></p>
+        <p><label><input type=checkbox>Onion</label></p>
+        <p><label><input type=checkbox>Mushroom</label></p>
+      </fieldset>
+      <p><label>Preferred delivery time:<input type=time min="11:00" max="21:00" step=""900></label></p>
+      <p><label>Delivery instructions:<textarea></textarea></label></p>
+      <p><button>Submit order</button></p>
+    </form>
+    <input id="fetchbutton" type="button" value="Send message"></input>
+    <script>
+      document.body.ononline = () => update(true);
+      document.body.onofflie = () => update(false);
+      document.body.onload = () => update(navigator.onLine);
+    </script>
+    <script src="prepare1216_fetch.js"></script>
   </body>
 </html>
