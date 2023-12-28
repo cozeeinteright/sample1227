@@ -5,10 +5,64 @@
     <script src='mysite.js' defer></script>
   </head>
   <body>
-    <p><a href="mysite_about.html">About</a></p>
-    <form action="postmessage" method="post" enctype="application/x-www-form-urlencoded">
-      <p><label>Customer name:<input name="custname"></label></p>
-      <input type="submit" value="Click">
+    <h1>Title</h1>
+    <ol>
+      <li><a href='login.html'>login</a></li>
+      <li>Guest</li>
+    </ol>
+    <label>
+      <input type="checkbox" id="cbA" value="A"/>
+      CheckBox A
+    </label>
+    <label>
+      <input type="checkbox" id="cbB" value="B" checked/>
+      checkBox
+    </label>
+    <label>
+      <input type="checkbox" id="cbC" value="C" />
+      CheckBox C
+    </label>
+    <input class="inputform" type="'text">
+    <button class="button" type="button">Click</button>
+    <div class="log"></div>
+    <form>
+      <label for="myText">Input text</label>
+      <input type="text" name="myText" id="myText">
+      <button>Submit</button>
     </form>
   </body>
+  <script>
+    document.querySelector('.button').addEventListener('click',() => {
+      let text = document.querySelector('.inputform').value;
+      alert(text);
+    })
+    const cbA = document.querySelector('#cbA');
+    const checkedA = cbA.checked;
+    cbA.addEventListener('change', (event) => {
+      const value = event.target.checked;
+
+      const log = `Check box A is ${value}`;
+      document.querySelector('.log').innerHTML = log;
+    })
+
+    const cbB = document.querySelector('#cbB');
+    const checkedB = cbB.checked;
+
+    const cbC = document.querySelector('#cbC');
+    const checkedC = cbC.checked;
+
+    console.log('check box A is ',checkedA);
+    console.log('Check box B is ',checkedB);
+    console.log('Check box C is ',checkedC);
+
+    const formElement = document.querySelector('form');
+    formElement.addEventListener('submit', handleSubmit);
+
+    function handleSubmit(event) {
+      const isYes = confirm('Are your sure? we will send This content ');
+      if(isYes === false) {
+        event.preventDefault();
+      }
+    }
+  </script> 
 </html>
